@@ -1,0 +1,206 @@
+:root{
+    --color1: rgb(173, 47, 173);
+    --colorProject: rgb(136, 38, 136);
+    --color2: rgb(120, 30, 120);
+    --color3: rgb(77, 3, 77);
+    --color4: rgb(35, 2, 35);
+}
+.container {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    flex-grow: 1;
+}
+.object {
+    display: flex;
+    gap: 5em;
+}
+.section-title {
+    font-size: 20pt;
+    /* font-family: Comic Sans MS, Comic Sans, cursive */
+}
+.left {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 10%
+}
+.right {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 90%;
+}
+.date {
+    text-align: end;
+    /* font-family: Luminari, fantasy; */
+    font-size: 20px;
+    border: 5%;
+    width: 10%; /*for mobile*/
+}
+.date img{ 
+    width: 100%
+}
+.color1 {
+    color: var(--color1);
+}
+.colorProject {
+    color: var(--colorProject);
+}
+.color2 {
+    color: var(--color2);
+}
+.color3 {
+    color: var(--color3);
+}
+.color4 {
+    color: var(--color4);
+}
+.space{
+    height: 3em;
+}
+.title {
+    padding: 0 0 2em 2em ;
+    font-size: 40pt;
+    /* font-family: Trattatello, fantasy; */
+    /* text-shadow: 0 0 10px purple; */
+    /* animation-name: slideInRightMain;
+    animation-duration: 3s;
+    transition: transform 3s; */
+    position: absolute;
+    z-index: 0;
+}
+.corner {
+    height: 3em;;
+}
+.item {
+    max-width: 70em;
+    width: 90%; /*for mobile?*/
+}
+
+/* .title-shadow1 {
+    padding: 0 0 2em 5em;
+    animation-name: slideInRightMain;
+    animation-delay: .03s;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    position: absolute;
+    z-index: -1;
+    color: rgb(35, 2, 35);
+}
+.title-shadow2 {
+    padding: 0 0 2em 5em;
+    animation-name: slideInRightMain;
+    animation-delay: .05s;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    position: absolute;
+    z-index: -2;
+    color: rgb(77, 3, 77);
+}
+.title-shadow3 {
+    padding: 0 0 2em 5em;
+    animation-name: slideInRightMain;
+    animation-delay: .1s;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    position: absolute;
+    z-index: -3;
+    color: rgb(120, 30, 120);
+} */
+
+@keyframes slideInRightMain {
+    0%{
+        transform:translateX(25em);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* 
+---
+---
+*/
+.rect {
+    max-width: 71em;
+    height: .3em;
+}
+.styled-rect {
+    height: 50%;
+    width: 100%;
+    /* x: 1.5em; */
+}
+/* 
+---
+---
+*/
+.petal {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    /* z-index: -10; */
+    /* background-color: gold; */
+    animation:
+     x 3s infinite ease-in-out alternate,
+     y 9s linear infinite,
+     rot 3s infinite linear alternate,
+     z 9s linear infinite;
+}
+.petal-line {
+    stroke: rgb(219, 165, 174);
+    fill: pink;
+}
+.petal-seam {
+    stroke: rgb(219, 165, 174);
+    fill: transparent;
+}
+
+@keyframes x {
+    0% {
+        left: 50%;
+    }
+    100% {
+        left: 25%;
+    }
+
+}
+@keyframes y {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 150%;
+        /* bottom:-10% */
+    }
+}
+@keyframes rot {
+    0% {
+        rotate: 0deg;
+    }
+    50%{
+        rotate: -30deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+@keyframes z {
+    0%,50%,100% {
+        scale: .9;
+        z-index: -10;
+    }
+    25%,75% {
+        scale: 1.2;
+        z-index: 10;
+    }
+}
+  
